@@ -1,0 +1,34 @@
+[alias]
+        co = commit
+        com = commit
+        comm = commit
+        commi = commit
+        d = diff
+        di = diff
+        dif = diff
+        st = status -sb
+        hi = log --oneline --graph --decorate
+        his = log --oneline --graph --decorate
+        hist = log --oneline --graph --decorate
+        ch = checkout
+        che = checkout
+        chec = checkout
+        check = checkout
+        checko = checkout
+        checkou = checkout
+
+[color]
+        branch = always
+        diff = always
+        interactive = always
+        status = always
+
+[core]
+        editor = vim
+
+[user]
+	name = Ryan Ralph
+	email = ryanralph1991+bitbucket@gmail.com
+
+[push]
+	default = matching
