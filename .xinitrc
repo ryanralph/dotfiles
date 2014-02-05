@@ -31,7 +31,7 @@ for (( i = 0;; ++i )); do
 	dtime=$(date +"%a %d %b %R")
 
 	# Overall output command
-	DWM_STATUS="$lsop | SSID: $DWM_ESSID | BTC = $lbtcusd USD | Power: [$DWM_BATTERY] | Vol: $DWM_VOL | $dtime";
+	DWM_STATUS="$lsop | SSID: $DWM_ESSID | BTC = $lbtcusd USD | Power: $DWM_BATTERY | Vol: $DWM_VOL | $dtime";
 	xsetroot -name "$DWM_STATUS";
 	sleep 1
 done &
