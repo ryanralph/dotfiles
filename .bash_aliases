@@ -19,7 +19,7 @@ function newWifi() {
 }
 
 function connectWifi() {
-	sudo wpa_supplicant -i wlan0 -c ~/wifi/$1.conf
+	sudo wpa_supplicant -i wlan0 -c ~/wifi/$1.conf &
 }
 
 #C is for clear
