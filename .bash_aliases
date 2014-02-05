@@ -1,3 +1,27 @@
+function btcusd() {
+      echo `curl -s https://api.bitcoinaverage.com/ticker/USD/last`
+}
+
+function myip() {
+      curl -s http://checkip.dyndns.org/ | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'
+}
+
+function pw() {
+      echo `cat /dev/urandom | base64 | head -c $1`
+}
+
+function wpw() {
+      shuf --random-source=/dev/urandom -n$1 /usr/share/dict/cracklib-small
+}
+
+function newWifi() {
+	wpa_passphrase $1 $2 > ~/wifi/$1.conf
+}
+
+function connectWifi() {
+	sudo wpa_supplicant -i wlan0 -c ~/wifi/$1.conf
+}
+
 #C is for clear
 alias c='clear'
 
@@ -30,12 +54,12 @@ alias ports='netstat -tulanp'
 #SAFETY NETS
 # do not delete / or prompt if deleting more than 3 files at a time #
 alias rm='rm -I --preserve-root'
- 
+
 # confirmation #
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
- 
+
 # Parenting changing perms on / #
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
