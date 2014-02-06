@@ -15,11 +15,7 @@ function wpw() {
 }
 
 function newWifi() {
-	wpa_passphrase $1 $2 > ~/wifi/$1.conf
-}
-
-function connectWifi() {
-	sudo wpa_supplicant -i wlan0 -c ~/wifi/$1.conf &
+	 sudo sh -c "wpa_passphrase $1 $2 >> /etc/wpa_supplicant.conf"
 }
 
 #C is for clear
