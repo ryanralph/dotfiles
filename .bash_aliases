@@ -18,6 +18,11 @@ function newWifi() {
 	 sudo sh -c "wpa_passphrase $1 $2 >> /etc/wpa_supplicant.conf"
 }
 
+function keyAgent() {
+	eval $(ssh-agent)
+	ssh-add ~/.ssh/$1
+}
+
 #C is for clear
 alias c='clear'
 
