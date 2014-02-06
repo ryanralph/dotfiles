@@ -9,7 +9,7 @@ setxkbmap -option ctrl:nocaps
 for (( i = 0;; ++i )); do
 
 	# random wallpaper every 30mins
-	if (( i % 1800 )); then
+	if (( i % 1800000 )); then
 		feh --bg-fill `find ~/Downloads/Wallpapers -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
 	fi
 
