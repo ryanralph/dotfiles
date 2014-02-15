@@ -67,3 +67,5 @@ alias poweroff='sudo poweroff'
 alias halt='sudo halt'
 alias shutdown='sudo shutdown 0'
 
+alias gpgc="gpg -c"
+alias gpgd="gpg -d"
