@@ -1,4 +1,5 @@
 [alias]
+	  bl = branch -avv
         co = commit
         com = commit
         comm = commit
