@@ -1,5 +1,13 @@
 #!/bin/bash
 
+eval $(ssh-agent)
+
+export EC2_HOME=~/.ec2
+export PATH=$PATH:$EC2_HOME/bin
+export EC2_PRIVATE_KEY=$EC2_HOME/pk-NBFRAAWZZNXXFZDUTWY3HSIBV6YZR66B.pem
+export EC2_CERT=$EC2_HOME/cert-NBFRAAWZZNXXFZDUTWY3HSIBV6YZR66B.pem
+export JAVA_HOME=/opt/java/jre
+
 source .bash_aliases
 
 # disable caps lock
