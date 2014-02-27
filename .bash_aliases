@@ -16,6 +16,7 @@ function wpw() {
 
 function newWifi() {
 	 sudo sh -c "wpa_passphrase $1 $2 >> /etc/wpa_supplicant.conf"
+	 sudo systemctl restart dhcpcd
 }
 
 #C is for clear
