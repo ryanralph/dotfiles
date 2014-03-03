@@ -19,7 +19,7 @@ for (( i = 0;; ++i )); do
 	DWM_BATTERY=$(acpi | awk '{print $4}');
 
 	# Wi-Fi eSSID
-	DWM_ESSID=$(iw dev wlan0 info | grep 'ssid' |  awk '{print $2}');
+	DWM_ESSID=$(iw dev wlan0 link | grep 'SSID' |  awk '{print $2}');
 
 	# Volume Level
 	DWM_VOL=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
