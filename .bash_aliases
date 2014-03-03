@@ -19,6 +19,12 @@ function newWifi() {
 	 sudo systemctl restart dhcpcd
 }
 
+#Scan Wifi networks currently within range
+alias scanWifi='sudo iw dev wlan0 scan | grep "SSID"'
+
+#Restart Wifi simple command
+alias restartWifi='sudo systemctl restart dhcpcd'
+
 #C is for clear
 alias c='clear'
 
