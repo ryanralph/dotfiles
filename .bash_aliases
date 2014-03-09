@@ -74,5 +74,9 @@ alias poweroff='sudo poweroff'
 alias halt='sudo halt'
 alias shutdown='sudo shutdown 0'
 
+#GPG encrypt/decrypt
 alias gpgc="gpg -c"
 alias gpgd="gpg -d"
+
+#Vim/Vi alias
+alias vi='vim'
