@@ -85,3 +85,6 @@ alias gpgd="gpg -d"
 
 #Vim/Vi alias
 alias vi='vim'
+
+#BitMessage
+alias bitMessage='python2 ~/PyBitmessage/src/bitmessagemain.py'
