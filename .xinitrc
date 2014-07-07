@@ -39,6 +39,6 @@ for (( i = 0;; ++i )); do
 done &
 
 #Lock if inactive for 5 minutes or if mouse button is held in the bottom right corner for 3 secs
-xautolock -time 5 -locker slock -nowlocker slock -detectsleep -corners 000+ -cornerdelay 3 &
+xautolock -time 5 -locker slock -nowlocker slock -detectsleep -corners 000+ -cornerdelay 10 &
 
 exec dwm
