@@ -29,14 +29,11 @@ for (( i = 0;; ++i )); do
 		lbtcusd=$(btcusd)
 	fi
 
-	#Open Ports (courtesy of RommelVR)
-	lsop=$(ss -natu | tail -n+2 | tr ':' ' ' |  awk '{ print $8 }' | sort | uniq -c | tr -d '\n' | tr -s ' ')
-
 	#Time
 	dtime=$(date +"%a %d %b %R")
 
 	# Overall output command
-	DWM_STATUS="$lsop | SSID: $DWM_ESSID | BTC = $lbtcusd USD | Power: $DWM_BATTERY | Vol: $DWM_VOL | $dtime";
+	DWM_STATUS="SSID: $DWM_ESSID | BTC = $lbtcusd USD | Power: $DWM_BATTERY | Vol: $DWM_VOL | $dtime";
 	xsetroot -name "$DWM_STATUS";
 	sleep 1
 done &
