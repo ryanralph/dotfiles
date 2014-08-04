@@ -15,14 +15,16 @@ function wpw() {
 }
 
 function newWifi() {
-	 sudo sh -c "wpa_passphrase $1 $2 >> /etc/wpa_supplicant.conf"
+	 sudo sh -c "wpa_passphrase $1 $2 >> /etc/wpa_supplicant/wpa_supplicant.conf"
 	 sudo systemctl restart dhcpcd
 }
 
 function pdf() {
 	mupdf $1 &
 }
-
+function changeBG() {
+	feh --bg-fill `find ~/Downloads/Wallpapers -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
+}
 
 #Scan Wifi networks currently within range
 alias scanWifi='sudo iw dev wlan0 scan | grep "SSID"'
