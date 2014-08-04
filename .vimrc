@@ -22,8 +22,8 @@ set showmode
 set joinspaces
 set noexpandtab
 set shiftround
-set shiftwidth=6
-set tabstop=6
+set shiftwidth=3
+set tabstop=3
 
 " No more epilepsy
 set noerrorbells
