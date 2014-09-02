@@ -15,6 +15,15 @@ for (( i = 0;; ++i )); do
 		changeBG
 	fi
 
+	if (i % 30 ); then #Check if OpenVPN is running
+		VPN_CHECK=$(pidof openvpn)
+		if [ -z "$VPN_CHECK" ]; then
+			VPN_RUNNING="VPN [ON]"
+		else
+			VPN_RUNNING="VPN [OFF]"
+		fi
+	fi
+
 	# Power/Battery Status
 	DWM_BATTERY=$(acpi | awk '{print $4}');
 
@@ -33,7 +42,7 @@ for (( i = 0;; ++i )); do
 	dtime=$(date +"%a %d %b %R")
 
 	# Overall output command
-	DWM_STATUS="SSID: $DWM_ESSID | BTC = $lbtcusd USD | Power: $DWM_BATTERY | Vol: $DWM_VOL | $dtime";
+	DWM_STATUS="VPN: $VPN_RUNNING | SSID: $DWM_ESSID | BTC = $lbtcusd USD | Power: $DWM_BATTERY | Vol: $DWM_VOL | $dtime";
 	xsetroot -name "$DWM_STATUS";
 	sleep 1
 done &
