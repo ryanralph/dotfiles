@@ -15,12 +15,12 @@ for (( i = 0;; ++i )); do
 		changeBG
 	fi
 
-	if (i % 30 ); then #Check if OpenVPN is running
+	if ((i % 30 == 0 )); then #Check if OpenVPN is running
 		VPN_CHECK=$(pidof openvpn)
 		if [ -z "$VPN_CHECK" ]; then
-			VPN_RUNNING="VPN [ON]"
+			VPN_RUNNING="[ON]"
 		else
-			VPN_RUNNING="VPN [OFF]"
+			VPN_RUNNING="[OFF]"
 		fi
 	fi
 
