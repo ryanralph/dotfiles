@@ -15,13 +15,8 @@ for (( i = 0;; ++i )); do
 		changeBG
 	fi
 
-	if ((i % 30 == 0 )); then #Check if OpenVPN is running
-		VPN_CHECK=$(pidof openvpn)
-		if [ -z "$VPN_CHECK" ]; then
-			VPN_RUNNING="[ON]"
-		else
-			VPN_RUNNING="[OFF]"
-		fi
+	if ((i % 30 == 0 )); then
+		VPN_RUNNING=$(pgrep openvpn > /dev/null && echo "[ON]")
 	fi
 
 	# Power/Battery Status
@@ -49,5 +44,3 @@ done &
 
 #Lock if inactive for 5 minutes or if mouse button is held in the bottom right corner for 3 secs
 xautolock -time 5 -locker slock -nowlocker slock -detectsleep -corners 000+ -cornerdelay 10 &
-
-exec dwm

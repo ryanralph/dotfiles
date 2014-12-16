@@ -24,3 +24,5 @@ if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 else
 	PS1="\u@\h:\w\$ "
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -1,4 +1,19 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'airblade/vim-gitgutter'
+Plug 'elzr/vim-json'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+
+call plug#end()
+
 set nocompatible
+
+" Set line numbers on
+set number
 
 " Search ignores case, unless case is specified
 set ignorecase

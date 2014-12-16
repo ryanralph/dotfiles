@@ -6,3 +6,4 @@ ln -s ~/dotfiles/.gitconfig ~/
 ln -s ~/dotfiles/.vim ~/
 ln -s ~/dotfiles/.vimrc ~/
 ln -s ~/dotfiles/.xinitrc ~/
+ln -s ~/dotfiles/.zshrc ~/

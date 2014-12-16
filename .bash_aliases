@@ -90,3 +90,14 @@ alias vi='vim'
 
 #Check logs
 alias journal="sudo journalctl -r"
+
+#Restart OpenVPN
+alias rr='sudo systemctl restart openvpn@client'
+
+#Change VPN alias
+function vpnswitch () {
+  sudo cp /home/ryanralph/openvpn/$1 /etc/openvpn/client.conf
+  sudo systemctl restart openvpn@client
+}
+alias vpnenable='sudo systemctl start openvpn@client'
+alias vpndisable='sudo systemctl stop openvpn@client'
