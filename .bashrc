@@ -8,11 +8,10 @@ export EDITOR=vim
 export VISUAL=vim
 
 # color options
-export GREP_OPTIONS='--color=always -I'
 export LESS='--no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
 
 # history
-export HISTFILE=/dev/null
+export HISTFILE=~/.bash_history
 export LESSHISTFILE=/dev/null
 
 # wrap after resize
@@ -24,5 +23,3 @@ if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 else
 	PS1="\u@\h:\w\$ "
 fi
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

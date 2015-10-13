@@ -19,9 +19,6 @@ function newWifi() {
 	 sudo systemctl restart dhcpcd
 }
 
-function pdf() {
-	mupdf $1 &
-}
 function changeBG() {
 	feh --bg-fill `find ~/Downloads/Wallpapers -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
 }
@@ -92,12 +89,8 @@ alias vi='vim'
 alias journal="sudo journalctl -r"
 
 #Restart OpenVPN
-alias rr='sudo systemctl restart openvpn@client'
+alias rr='sudo systemctl daemon-reload openvpn@client'
 
-#Change VPN alias
-function vpnswitch () {
-  sudo cp /home/ryanralph/openvpn/$1 /etc/openvpn/client.conf
-  sudo systemctl restart openvpn@client
-}
 alias vpnenable='sudo systemctl start openvpn@client'
 alias vpndisable='sudo systemctl stop openvpn@client'
+alias vpnrestart='sudo systemctl restart openvpn@client'
