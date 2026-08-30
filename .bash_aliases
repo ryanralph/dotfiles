@@ -1,7 +1,3 @@
-function btcusd() {
-      echo `curl -s https://api.bitcoinaverage.com/ticker/USD/last`
-}
-
 function myip() {
       curl -s http://checkip.dyndns.org/ | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'
 }
@@ -9,25 +5,6 @@ function myip() {
 function pw() {
       echo `cat /dev/urandom | base64 | head -c $1`
 }
-
-function wpw() {
-      shuf --random-source=/dev/urandom -n$1 /usr/share/dict/cracklib-small
-}
-
-function newWifi() {
-	 sudo sh -c "wpa_passphrase $1 $2 >> /etc/wpa_supplicant/wpa_supplicant.conf"
-	 sudo systemctl restart dhcpcd
-}
-
-function changeBG() {
-	feh --bg-fill `find ~/Downloads/Wallpapers -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
-}
-
-#Scan Wifi networks currently within range
-alias scanWifi='sudo iw dev wlan0 scan | grep "SSID"'
-
-#Restart Wifi simple command
-alias restartWifi='sudo systemctl restart dhcpcd'
 
 #C is for clear
 alias c='clear'
@@ -88,9 +65,3 @@ alias vi='vim'
 #Check logs
 alias journal="sudo journalctl -r"
 
-#Restart OpenVPN
-alias rr='sudo systemctl daemon-reload openvpn@client'
-
-alias vpnenable='sudo systemctl start openvpn@client'
-alias vpndisable='sudo systemctl stop openvpn@client'
-alias vpnrestart='sudo systemctl restart openvpn@client'
