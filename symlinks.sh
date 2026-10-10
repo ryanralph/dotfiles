@@ -7,3 +7,4 @@ ln -s ~/dotfiles/.vim ~/
 ln -s ~/dotfiles/.vimrc ~/
 ln -s ~/dotfiles/.xinitrc ~/
 ln -s ~/dotfiles/.xinitrc ~/.xprofile
+ln -s ~/dotfiles/.tmux.conf ~/
